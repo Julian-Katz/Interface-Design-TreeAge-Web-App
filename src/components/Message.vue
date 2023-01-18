@@ -31,10 +31,13 @@ export default {
 .bot {
     background: rgb(255, 255, 255);
     border-radius: 1rem 1rem 1rem 0rem;
+    color: white;
+    background: rgb(48, 48, 48);
 }
 .user {
-    background: rgb(172, 249, 255);
+    background: #79a879;
     border-radius: 1rem 1rem 0rem 1rem;
     align-self: flex-end;
+    color: white;
 }
 </style>
