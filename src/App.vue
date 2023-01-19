@@ -358,7 +358,7 @@ input {
     align-items: center;
     padding: 1rem;
     height: 10%;
-    min-height: 3.5rem;
+    min-height: 4.5rem;
     background: $primary-color;
     h1 {
       color: white;
@@ -380,7 +380,7 @@ input {
     column-gap: 0.5rem;
     padding: 0.7rem;
     height: 7%;
-    min-height: 1.5rem;
+    min-height: 3.2rem;
     background: $primary-color;
     input {
         width: 100%;
