@@ -323,7 +323,7 @@ select {
 }
 html,
 body {
-    height: 100%;
+    height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 }
 #app {
