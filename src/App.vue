@@ -1,44 +1,46 @@
 <template>
-  <div class="container">
-    <div class="header">
-      <h1>TreeAge</h1>
-    </div>
-    <div class="chat" ref="chat">
-      <Message
-        v-for="message in currentChat"
-        :key="message"
-        v-html="message.text"
-        :userMessage="message.userMessage"
+  <div class="center-body">
+    <div class="container">
+      <div class="header">
+        <h1>TreeAge</h1>
+      </div>
+      <div class="chat" ref="chat">
+        <Message
+          v-for="message in currentChat"
+          :key="message"
+          v-html="message.text"
+          :userMessage="message.userMessage"
+        >
+        </Message>
+      </div>
+      <form
+        class="input"
+        v-if="!currentButtons"
+        @submit.prevent="handleTextInput"
       >
-      </Message>
+        <input v-model="textInput"/>
+        <button
+          class="text-input-button"
+          type="submit"
+        >
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_429_11051)">
+              <path d="M5 12L4.39589 6.56299C4.22297 5.0067 5.82469 3.86433 7.23983 4.53465L19.1842 10.1925C20.7093 10.9149 20.7093 13.0851 19.1842 13.8075L7.23983 19.4653C5.82469 20.1357 4.22297 18.9933 4.39589 17.437L5 12ZM5 12H12" stroke="#79a879" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_429_11051">
+                <rect width="24" height="24" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </form>
+      <ButtonInput
+        v-if="currentButtons"
+        :buttons="currentButtons"
+        @buttonClicked="handleButtonInput"
+      />
     </div>
-    <form
-      class="input"
-      v-if="!currentButtons"
-      @submit.prevent="handleTextInput"
-    >
-      <input v-model="textInput"/>
-      <button
-        class="text-input-button"
-        type="submit"
-      >
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0_429_11051)">
-            <path d="M5 12L4.39589 6.56299C4.22297 5.0067 5.82469 3.86433 7.23983 4.53465L19.1842 10.1925C20.7093 10.9149 20.7093 13.0851 19.1842 13.8075L7.23983 19.4653C5.82469 20.1357 4.22297 18.9933 4.39589 17.437L5 12ZM5 12H12" stroke="#79a879" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </g>
-          <defs>
-            <clipPath id="clip0_429_11051">
-              <rect width="24" height="24" fill="white"/>
-            </clipPath>
-          </defs>
-        </svg>
-      </button>
-    </form>
-    <ButtonInput
-      v-if="currentButtons"
-      :buttons="currentButtons"
-      @buttonClicked="handleButtonInput"
-    />
   </div>
 </template>
 
@@ -332,15 +334,24 @@ input {
     border-radius: 5px;
     padding: 0.5rem;
 }
-
+.center-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
 .container {
-    width: 100vw;
-    height: 100%;
-    overflow: hidden;
-    background: #707070;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  max-width: 400px;
+  max-height: 850px;
+  overflow: hidden;
+  background: #707070;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .header {
     display: flex;
