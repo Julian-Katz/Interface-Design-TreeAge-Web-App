@@ -283,7 +283,7 @@ export default {
               this.currentChat.push(message);
             }, this.messageTimeOut * 2);
             this.step = 'measuringWheel';
-          } else if (this.textInput === 'manuell messen') {
+          } else if (this.textInput === 'Manuell messen') {
             this.step = 'manual';
             setTimeout(() => {
               this.currentChat.push(this.messages.manualMode);
@@ -356,11 +356,20 @@ export default {
         this.currentChat.at(-1).text = `Der Messwert beträgt ${newValue}m`;
       }
     },
+    currentChat: {
+      handler() {
+        this.$refs.chat.scrollTop = this.$refs.chat.scrollHeight;
+        setTimeout(() => {
+          this.$refs.chat.scrollTop = this.$refs.chat.scrollHeight;
+        }, 1000);
+      },
+      deep: true,
+    },
   },
   mounted() {
-    setInterval(() => {
-      this.$refs.chat.scrollTop = this.$refs.chat.scrollHeight;
-    }, 50);
+    // setInterval(() => {
+    //   this.$refs.chat.scrollTop = this.$refs.chat.scrollHeight;
+    // }, 50);
   },
 };
 </script>
