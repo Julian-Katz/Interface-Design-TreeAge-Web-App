@@ -219,6 +219,13 @@ export default {
     async handleCharacteristicValueChanged(event) {
       this.treeGirthMm = event.target.value.getUint32(0, true);
     },
+    allTreesString() {
+      let treesString = '';
+      this.trees.forEach((tree) => {
+        treesString = `${treesString + tree.name}, `;
+      });
+      return treesString;
+    },
     handleTextInput() {
       if (this.textInput === '') {
         return;
@@ -236,7 +243,10 @@ export default {
           });
           if (!this.currentTree) {
             setTimeout(() => {
-              this.currentChat.push(this.messages.kindOfThreeNotFound);
+              this.currentChat.push({
+                text: `Baumart nicht gefunden! Versuche es erneut. Folgende Baumarten unterstütze ich:<br> ${this.allTreesString()}`,
+                userMessage: false,
+              });
             }, this.messageTimeOut);
             this.invalidInput = true;
             this.textInput = '';
