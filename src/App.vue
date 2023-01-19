@@ -115,8 +115,76 @@ export default {
           factor: 0.7,
         },
         {
+          name: 'Föhre',
+          factor: 0.7,
+        },
+        {
+          name: 'Rosskastanie',
+          factor: 0.7,
+        },
+        {
           name: 'Kastanie',
           factor: 0.7,
+        },
+        {
+          name: 'Buche',
+          factor: 0.6,
+        },
+        {
+          name: 'Ahorn',
+          factor: 0.6,
+        },
+        {
+          name: 'Ulme',
+          factor: 0.6,
+        },
+        {
+          name: 'Tanne',
+          factor: 0.6,
+        },
+        {
+          name: 'Esche',
+          factor: 0.6,
+        },
+        {
+          name: 'Schwarzpappel',
+          factor: 0.6,
+        },
+        {
+          name: 'Fichte',
+          factor: 0.6,
+        },
+        {
+          name: 'Lärche',
+          factor: 0.6,
+        },
+        {
+          name: 'Nussbaum',
+          factor: 0.6,
+        },
+        {
+          name: 'Erle',
+          factor: 0.6,
+        },
+        {
+          name: 'Robinie',
+          factor: 0.6,
+        },
+        {
+          name: 'Edelkastanie',
+          factor: 0.4,
+        },
+        {
+          name: 'Platane',
+          factor: 0.4,
+        },
+        {
+          name: 'Zeder',
+          factor: 0.4,
+        },
+        {
+          name: 'Mammutbaum',
+          factor: 0.3,
         },
       ],
     };
