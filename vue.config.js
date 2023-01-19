@@ -1,3 +1,3 @@
-export default defineConfig({
-  base: '/tree-age/',
-});
+module.exports = {
+  publicPath: '/tree-age/',
+};
