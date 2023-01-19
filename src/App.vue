@@ -276,15 +276,6 @@ export default {
         this.currentChat.at(-1).text = `Der Messwert beträgt ${newValue}m`;
       }
     },
-    // currentChat: {
-    //   handler() {
-    //     this.$refs.chat.scrollTop = this.$refs.chat.scrollHeight;
-    //     setTimeout(() => {
-    //       this.$refs.chat.scrollTop = this.$refs.chat.scrollHeight;
-    //     }, 1100);
-    //   },
-    //   deep: true,
-    // },
   },
   mounted() {
     setInterval(() => {
