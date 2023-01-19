@@ -287,10 +287,6 @@ export default {
     },
   },
   mounted() {
-    const resizeObserver = new ResizeObserver(() => {
-      console.log('resize');
-    });
-    resizeObserver.observe(this.$refs.chat);
   },
 };
 </script>
