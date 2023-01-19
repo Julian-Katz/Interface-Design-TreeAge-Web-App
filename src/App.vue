@@ -75,7 +75,7 @@ export default {
               text: 'Messrad nutzen',
             },
             {
-              text: 'manuell messen',
+              text: 'Manuell messen',
             },
           ],
           userMessage: false,
