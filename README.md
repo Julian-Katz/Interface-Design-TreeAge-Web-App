@@ -1,24 +1,5 @@
-# tree-age
+# Interface Design TreeAge Web App
 
-## Project setup
-```
-npm install
-```
+Web App zum ermitteln des Baumalters mithilfe des Umfangs. Der Umfang wird mithilfe eines ESP32 nach dem Prinzip eiens Messrads gemessen und dann mit Bluetooth Low Energy an die Web App übertragen.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[ESP32 Code](https://github.com/Julian-Katz/Interface-Design-TreeAge-ESP32)
