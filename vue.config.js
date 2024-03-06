@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/tree-age/',
+  publicPath: '/Interface-Design-TreeAge-Web-App/',
 };
